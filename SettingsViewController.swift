@@ -10,44 +10,29 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    /*@IBOutlet weak var mainView: UIView!
-    
-    @IBAction func goBackBlue(sender: AnyObject) {
-        
-    }
-    
-    
-    @IBAction func goBackGreen(sender: AnyObject) {
-        
-    }
-    
-    
-    @IBAction func goBackOrange(sender: AnyObject) {
-        
-    }
-    
-    
-    @IBAction func goBackPink(sender: AnyObject) {
-        
-    }*/
-    
+    @IBOutlet weak var mainView: UIView!
+  
+    let tapRecognizer = UITapGestureRecognizer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         //var recognizer = UIGestureRecognizer(target: mainView, action: "unwindSegue:")
-        
+        tapRecognizer.addTarget(self, action: "unwindSegue:")
+        mainView.addGestureRecognizer(tapRecognizer)
+        mainView.userInteractionEnabled = true
     }
 
-    /*func unwindSegue() {
-        println("unwind")
-    }*/
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    func unwindSegue(sender:AnyObject) {
+        println("unwind")
+    }
+    
     /*
     // MARK: - Navigation
 

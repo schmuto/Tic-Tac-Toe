@@ -283,6 +283,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="mainView" destination="9lu-Uz-zlC" id="Yrh-cr-Yk5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NMd-3E-eeF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
