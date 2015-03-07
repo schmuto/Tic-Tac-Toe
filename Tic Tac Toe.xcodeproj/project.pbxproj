@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA587A231AABA11800E5B9EE /* bg_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = DA587A221AABA11800E5B9EE /* bg_orange.png */; };
 		DABD8CEE1AAA35C7003589BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD8CED1AAA35C7003589BD /* AppDelegate.swift */; };
 		DABD8CF01AAA35C7003589BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD8CEF1AAA35C7003589BD /* ViewController.swift */; };
 		DABD8CF31AAA35C7003589BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DABD8CF11AAA35C7003589BD /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DA587A221AABA11800E5B9EE /* bg_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_orange.png; sourceTree = "<group>"; };
 		DABD8CE81AAA35C7003589BD /* Tic Tac Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic Tac Toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABD8CEC1AAA35C7003589BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DABD8CED1AAA35C7003589BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				DABD8CF41AAA35C7003589BD /* Images.xcassets */,
 				DABD8D0D1AAA3B50003589BD /* board.png */,
 				DABD8D0E1AAA3B50003589BD /* circle.png */,
+				DA587A221AABA11800E5B9EE /* bg_orange.png */,
 				DABD8D0F1AAA3B50003589BD /* cross.png */,
 				DABD8CF61AAA35C7003589BD /* LaunchScreen.xib */,
 				DABD8CEB1AAA35C7003589BD /* Supporting Files */,
@@ -205,6 +208,7 @@
 				DABD8D101AAA3B50003589BD /* board.png in Resources */,
 				DABD8CF31AAA35C7003589BD /* Main.storyboard in Resources */,
 				DABD8D111AAA3B50003589BD /* circle.png in Resources */,
+				DA587A231AABA11800E5B9EE /* bg_orange.png in Resources */,
 				DABD8CF81AAA35C7003589BD /* LaunchScreen.xib in Resources */,
 				DABD8CF51AAA35C7003589BD /* Images.xcassets in Resources */,
 			);
