@@ -166,7 +166,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = "Tobias Schmücker";
+				ORGANIZATIONNAME = "Tobias S.";
 				TargetAttributes = {
 					DABD8CE71AAA35C7003589BD = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -417,6 +417,7 @@
 				DABD8D091AAA35C7003589BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DABD8D0A1AAA35C7003589BD /* Build configuration list for PBXNativeTarget "Tic Tac ToeTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +426,7 @@
 				DABD8D0C1AAA35C7003589BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
