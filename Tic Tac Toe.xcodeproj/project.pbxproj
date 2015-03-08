@@ -25,7 +25,6 @@
 		DABD8CF01AAA35C7003589BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD8CEF1AAA35C7003589BD /* ViewController.swift */; };
 		DABD8CF31AAA35C7003589BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DABD8CF11AAA35C7003589BD /* Main.storyboard */; };
 		DABD8CF51AAA35C7003589BD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DABD8CF41AAA35C7003589BD /* Images.xcassets */; };
-		DABD8CF81AAA35C7003589BD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DABD8CF61AAA35C7003589BD /* LaunchScreen.xib */; };
 		DABD8D041AAA35C7003589BD /* Tic_Tac_ToeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD8D031AAA35C7003589BD /* Tic_Tac_ToeTests.swift */; };
 		DABD8D101AAA3B50003589BD /* board.png in Resources */ = {isa = PBXBuildFile; fileRef = DABD8D0D1AAA3B50003589BD /* board.png */; };
 		DABD8D111AAA3B50003589BD /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = DABD8D0E1AAA3B50003589BD /* circle.png */; };
@@ -63,7 +62,6 @@
 		DABD8CEF1AAA35C7003589BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DABD8CF21AAA35C7003589BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DABD8CF41AAA35C7003589BD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		DABD8CF71AAA35C7003589BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DABD8CFD1AAA35C7003589BD /* Tic Tac ToeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tic Tac ToeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABD8D021AAA35C7003589BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DABD8D031AAA35C7003589BD /* Tic_Tac_ToeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tic_Tac_ToeTests.swift; sourceTree = "<group>"; };
@@ -140,7 +138,6 @@
 				DABD8CF11AAA35C7003589BD /* Main.storyboard */,
 				DABD8CF41AAA35C7003589BD /* Images.xcassets */,
 				DA587A361AABAC4D00E5B9EE /* Images */,
-				DABD8CF61AAA35C7003589BD /* LaunchScreen.xib */,
 				DABD8CEB1AAA35C7003589BD /* Supporting Files */,
 			);
 			path = "Tic Tac Toe";
@@ -267,7 +264,6 @@
 				DA587A231AABA11800E5B9EE /* bg_orange.png in Resources */,
 				DA587A321AABAC4200E5B9EE /* bg_button_orange_pressed.png in Resources */,
 				DA587A2E1AABAC4200E5B9EE /* bg_button_blue_pressed.png in Resources */,
-				DABD8CF81AAA35C7003589BD /* LaunchScreen.xib in Resources */,
 				DA587A351AABAC4200E5B9EE /* bg_button_pink.png in Resources */,
 				DABD8CF51AAA35C7003589BD /* Images.xcassets in Resources */,
 				DA587A301AABAC4200E5B9EE /* bg_button_green_pressed.png in Resources */,
@@ -319,14 +315,6 @@
 				DABD8CF21AAA35C7003589BD /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		DABD8CF61AAA35C7003589BD /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DABD8CF71AAA35C7003589BD /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -412,7 +400,7 @@
 		DABD8D081AAA35C7003589BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Tic-Tac-Toe-AppIcon";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Tic Tac Toe/Info.plist";
@@ -426,7 +414,7 @@
 		DABD8D091AAA35C7003589BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "Tic-Tac-Toe-AppIcon";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Tic Tac Toe/Info.plist";
