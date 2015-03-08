@@ -23,6 +23,7 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var pinkButton: UIButton!
     
     
+    
     @IBAction func panned(sender: AnyObject) {
         println("User cancelled")
         applyColor("")
@@ -62,6 +63,7 @@ class SettingsViewController: UIViewController {
     }
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         var currentColor: String = NSUserDefaults.standardUserDefaults().objectForKey("bgColor") as String
@@ -79,12 +81,14 @@ class SettingsViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
+    
     func returnButtonsToNormal() {
         for button in [blueButton, greenButton, orangeButton, pinkButton] {
             button.setImage(UIImage(named: "bg_button_\(button.titleLabel?.text)"), forState: .Normal)
         }
         
     }
+    
     
     func applyColor(color:String) {
         if color.isEmpty == false {
