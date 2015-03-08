@@ -44,7 +44,7 @@
 
 /* Begin PBXFileReference section */
 		DA2D69591AABB0BE00AC1590 /* settings-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings-100.png"; sourceTree = "<group>"; };
-		DA2D695D1AABB5DD00AC1590 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = ../SettingsViewController.swift; sourceTree = "<group>"; };
+		DA2D695D1AABB5DD00AC1590 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DA587A221AABA11800E5B9EE /* bg_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_orange.png; sourceTree = "<group>"; };
 		DA587A261AABAC4200E5B9EE /* bg_button_blue_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_button_blue_pressed.png; sourceTree = "<group>"; };
 		DA587A271AABAC4200E5B9EE /* bg_button_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_button_blue.png; sourceTree = "<group>"; };
