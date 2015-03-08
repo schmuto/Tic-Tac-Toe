@@ -14,6 +14,8 @@ class MainViewController: UIViewController {
     
     var winner = 0
     
+    var draw = false
+    
     let winnerNames = ["null", "Filled Circle", "Empty Circle"]
     
     var backgroundColor = "orange"
@@ -64,6 +66,19 @@ class MainViewController: UIViewController {
             UIView.transitionWithView(sender, duration: 0.2, options: .TransitionCrossDissolve, animations: { sender.setImage(image, forState: .Normal) }, completion: nil)
             sender.userInteractionEnabled = false
             
+            //if game ended in a draw
+            
+            
+            if (goNumber >= 10 && winner == 0) {
+                let playAgainAction = UIAlertAction(title: "Let's play again!", style: .Default) { (action) in
+                        self.resetGame()
+                }
+                let alertController = UIAlertController(title: "We have a tie!", message: "", preferredStyle: .Alert)
+                alertController.addAction(playAgainAction)
+                self.presentViewController(alertController, animated: true) {
+                }
+            }
+            
         }
     }
     
@@ -79,35 +94,39 @@ class MainViewController: UIViewController {
             backgroundColor = "orange"
             NSUserDefaults.standardUserDefaults().setObject(backgroundColor, forKey: "bgColor")
         }
-        
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    
     override func viewDidAppear(animated: Bool) {
         if (backgroundColor != NSUserDefaults.standardUserDefaults().objectForKey("bgColor") as String) {
             updateBackgroundColor()
         }
     }
     
+    
     func resetGame() {
         goNumber = 1
         winner = 0
         gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+        
         //starting with 0 in the for loop causes a crash
         button0.setImage(nil, forState: .Normal)
         UIView.transitionWithView(button0, duration: 0.2, options: .TransitionCrossDissolve, animations: { self.button0.setImage(nil, forState: .Normal) }, completion: nil)
         button0.userInteractionEnabled = true
+        
         for (var i = 1; i<=8; i++) {
-            
             var button:UIButton = view.viewWithTag(i) as UIButton
             UIView.transitionWithView(button, duration: 0.2, options: .TransitionCrossDissolve, animations: { button.setImage(nil, forState: .Normal) }, completion: nil)
             button.userInteractionEnabled = true
         }
     }
+    
     
     func updateBackgroundColor() {
         backgroundColor = NSUserDefaults.standardUserDefaults().objectForKey("bgColor") as String
