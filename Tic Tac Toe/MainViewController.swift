@@ -30,32 +30,23 @@ class MainViewController: UIViewController {
     
     @IBAction func buttonPressed(sender: UIButton) {
         
+        // if button hasn't been pressed and there's no winner
         if (gameState[sender.tag]==0 && winner == 0) {
             
-        
             var image = UIImage()
         
             if (goNumber%2 == 0) {
-            
                 image = UIImage(named: "cross.png")!
                 gameState[sender.tag] = 2
-            
             } else {
-            
                 image = UIImage(named: "circle.png")!
                 gameState[sender.tag] = 1
-            
             }
         
-            
             for combination in winningCombinations {
-                
                 if (gameState[combination[0]] == gameState[combination[1]] && gameState[combination[1]] == gameState[combination[2]] && gameState[combination[0]] != 0) {
-                    
                     winner = gameState[combination[0]]
-                    
                 }
-                
             }
             
             if (winner != 0) {
@@ -65,13 +56,13 @@ class MainViewController: UIViewController {
                 let alertController = UIAlertController(title: "We have a winner!", message: "\(winnerNames[winner]) wins.", preferredStyle: .Alert)
                 alertController.addAction(playAgainAction)
                 self.presentViewController(alertController, animated: true) {
-                    
                 }
             }
             
             goNumber++;
-        
-            sender.setImage(image, forState: .Normal)
+    
+            UIView.transitionWithView(sender, duration: 0.2, options: .TransitionCrossDissolve, animations: { sender.setImage(image, forState: .Normal) }, completion: nil)
+            sender.userInteractionEnabled = false
             
         }
     }
@@ -85,7 +76,6 @@ class MainViewController: UIViewController {
             backgroundColor = NSUserDefaults.standardUserDefaults().stringForKey("bgColor")!
             updateBackgroundColor()
         } else {
-            println("No color found in Storage")
             backgroundColor = "orange"
             NSUserDefaults.standardUserDefaults().setObject(backgroundColor, forKey: "bgColor")
         }
@@ -98,7 +88,9 @@ class MainViewController: UIViewController {
     }
 
     override func viewDidAppear(animated: Bool) {
-        updateBackgroundColor()
+        if (backgroundColor != NSUserDefaults.standardUserDefaults().objectForKey("bgColor") as String) {
+            updateBackgroundColor()
+        }
     }
     
     func resetGame() {
@@ -107,9 +99,13 @@ class MainViewController: UIViewController {
         gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
         //starting with 0 in the for loop causes a crash
         button0.setImage(nil, forState: .Normal)
+        UIView.transitionWithView(button0, duration: 0.2, options: .TransitionCrossDissolve, animations: { self.button0.setImage(nil, forState: .Normal) }, completion: nil)
+        button0.userInteractionEnabled = true
         for (var i = 1; i<=8; i++) {
+            
             var button:UIButton = view.viewWithTag(i) as UIButton
-            button.setImage(nil, forState: .Normal)
+            UIView.transitionWithView(button, duration: 0.2, options: .TransitionCrossDissolve, animations: { button.setImage(nil, forState: .Normal) }, completion: nil)
+            button.userInteractionEnabled = true
         }
     }
     

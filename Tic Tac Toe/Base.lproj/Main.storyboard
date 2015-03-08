@@ -222,8 +222,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4wc-1c-ggr" userLabel="ColorOptionsContainer">
-                                <rect key="frame" x="28" y="228" width="320" height="409"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXw-kU-9dF">
+                                <rect key="frame" x="16" y="637" width="87" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="icons8.com">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="openIcons8Website:" destination="avY-9b-KLI" eventType="touchUpInside" id="rqF-qg-KcA"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4wc-1c-ggr" userLabel="ColorOptionsContainer">
+                                <rect key="frame" x="27" y="129" width="320" height="409"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8C2-GN-SLq" userLabel="Pink container">
                                         <rect key="frame" x="45" y="319" width="230" height="88"/>
@@ -350,16 +360,6 @@
                                     <constraint firstAttribute="centerX" secondItem="h6i-Id-4Af" secondAttribute="centerX" id="yjj-2K-lrM"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RXw-kU-9dF">
-                                <rect key="frame" x="16" y="637" width="87" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <state key="normal" title="icons8.com">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="openIcons8Website:" destination="avY-9b-KLI" eventType="touchUpInside" id="rqF-qg-KcA"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
