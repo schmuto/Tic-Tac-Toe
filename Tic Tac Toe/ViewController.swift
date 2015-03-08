@@ -14,15 +14,19 @@ class ViewController: UIViewController {
     
     var winner = 0
     
-    let winnerNames = ["null", "Circle", "Cross"]
+    let winnerNames = ["null", "Filled Circle", "Empty Circle"]
+    
+    var backgroundColor = "orange"
     
     // 0 = empty, 1 = circle, 2 = cross
-    
     var gameState = [0, 0, 0, 0, 0, 0, 0, 0, 0]
     
     let winningCombinations = [[0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4, 8], [2,4,6]]
 
     @IBOutlet weak var button0: UIButton!
+    
+    @IBOutlet weak var bgView: UIImageView!
+    
     
     @IBAction func buttonPressed(sender: UIButton) {
         
@@ -70,21 +74,33 @@ class ViewController: UIViewController {
             sender.setImage(image, forState: .Normal)
             
         }
-        
-        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        var bgColorFromStorage = NSUserDefaults.standardUserDefaults().stringForKey("bgColor")
+        if (bgColorFromStorage != nil)  {
+            backgroundColor = NSUserDefaults.standardUserDefaults().stringForKey("bgColor")!
+            updateBackgroundColor()
+        } else {
+            println("No color found in Storage")
+            backgroundColor = "orange"
+            NSUserDefaults.standardUserDefaults().setObject(backgroundColor, forKey: "bgColor")
+        }
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewDidAppear(animated: Bool) {
+        updateBackgroundColor()
+    }
+    
     func resetGame() {
         goNumber = 1
         winner = 0
@@ -97,6 +113,11 @@ class ViewController: UIViewController {
         }
     }
     
+    func updateBackgroundColor() {
+        backgroundColor = NSUserDefaults.standardUserDefaults().objectForKey("bgColor") as String
+        let animationOptions = UIViewAnimationOptions.TransitionCrossDissolve
+        UIView.transitionWithView(bgView, duration: 0.5, options: animationOptions, animations:{self.bgView.image=UIImage(named: "bg_\(self.backgroundColor)")}, completion: nil)
+    }
     
 }
 

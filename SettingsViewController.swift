@@ -10,37 +10,85 @@ import UIKit
 
 class SettingsViewController: UIViewController {
     
-    @IBOutlet weak var mainView: UIView!
-  
-    let tapRecognizer = UITapGestureRecognizer()
+    
+    @IBOutlet weak var blueButton: UIButton!
+    
+    @IBOutlet weak var greenButton: UIButton!
+    
+    @IBOutlet weak var orangeButton: UIButton!
+    
+    @IBOutlet weak var pinkButton: UIButton!
+    
+    
+    @IBAction func panned(sender: AnyObject) {
+        println("User cancelled")
+        applyColor("")
+    }
+    
+    @IBAction func tappedBlue(sender: AnyObject) {
+        println("User chose blue")
+        returnButtonsToNormal()
+        blueButton.setImage(UIImage(named: "bg_button_blue_pressed"), forState: .Normal)
+        applyColor("blue")
+    }
+    
+    @IBAction func tappedGreen(sender: AnyObject) {
+        println("User chose green")
+        returnButtonsToNormal()
+        greenButton.setImage(UIImage(named: "bg_button_green_pressed"), forState: .Normal)
+        applyColor("green")
+    }
+    
+    @IBAction func tappedOrange(sender: AnyObject) {
+        println("User chose orange")
+        returnButtonsToNormal()
+        orangeButton.setImage(UIImage(named: "bg_button_orange_pressed"), forState: .Normal)
+        applyColor("orange")
+    }
+    
+    @IBAction func tappedPink(sender: AnyObject) {
+        println("User chose pink")
+        returnButtonsToNormal()
+        pinkButton.setImage(UIImage(named: "bg_button_pink_pressed"), forState: .Normal)
+        applyColor("pink")
+    }
+    
+    @IBAction func tappedUnwindSegue(sender: AnyObject) {
+        println("User cancelled")
+        applyColor("")
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //var recognizer = UIGestureRecognizer(target: mainView, action: "unwindSegue:")
-        tapRecognizer.addTarget(self, action: "unwindSegue:")
-        mainView.addGestureRecognizer(tapRecognizer)
-        mainView.userInteractionEnabled = true
+        var currentColor: String = NSUserDefaults.standardUserDefaults().objectForKey("bgColor") as String
+        switch currentColor {
+            case "blue": blueButton.setImage(UIImage(named: "bg_button_blue_pressed"), forState: .Normal)
+            case "green": greenButton.setImage(UIImage(named: "bg_button_green_pressed"), forState: .Normal)
+            case "orange": orangeButton.setImage(UIImage(named: "bg_button_orange_pressed"), forState: .Normal)
+            case "pink": pinkButton.setImage(UIImage(named: "bg_button_pink_pressed"), forState: .Normal)
+        default:  break
+        }
     }
-
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-    func unwindSegue(sender:AnyObject) {
-        println("unwind")
+    func returnButtonsToNormal() {
+        for button in [blueButton, greenButton, orangeButton, pinkButton] {
+            button.setImage(UIImage(named: "bg_button_\(button.titleLabel?.text)"), forState: .Normal)
+        }
+        
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func applyColor(color:String) {
+        if color.isEmpty == false {
+            println("apply new color")
+            NSUserDefaults.standardUserDefaults().setObject(color, forKey: "bgColor")
+        }
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
-    */
 
 }

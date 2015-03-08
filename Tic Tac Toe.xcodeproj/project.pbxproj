@@ -18,6 +18,9 @@
 		DA587A331AABAC4200E5B9EE /* bg_button_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = DA587A2B1AABAC4200E5B9EE /* bg_button_orange.png */; };
 		DA587A341AABAC4200E5B9EE /* bg_button_pink_pressed.png in Resources */ = {isa = PBXBuildFile; fileRef = DA587A2C1AABAC4200E5B9EE /* bg_button_pink_pressed.png */; };
 		DA587A351AABAC4200E5B9EE /* bg_button_pink.png in Resources */ = {isa = PBXBuildFile; fileRef = DA587A2D1AABAC4200E5B9EE /* bg_button_pink.png */; };
+		DA643B151AAC6F9A003A4757 /* bg_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = DA643B121AAC6F9A003A4757 /* bg_blue.png */; };
+		DA643B161AAC6F9A003A4757 /* bg_green.png in Resources */ = {isa = PBXBuildFile; fileRef = DA643B131AAC6F9A003A4757 /* bg_green.png */; };
+		DA643B171AAC6F9A003A4757 /* bg_pink.png in Resources */ = {isa = PBXBuildFile; fileRef = DA643B141AAC6F9A003A4757 /* bg_pink.png */; };
 		DABD8CEE1AAA35C7003589BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD8CED1AAA35C7003589BD /* AppDelegate.swift */; };
 		DABD8CF01AAA35C7003589BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DABD8CEF1AAA35C7003589BD /* ViewController.swift */; };
 		DABD8CF31AAA35C7003589BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DABD8CF11AAA35C7003589BD /* Main.storyboard */; };
@@ -51,6 +54,9 @@
 		DA587A2B1AABAC4200E5B9EE /* bg_button_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_button_orange.png; sourceTree = "<group>"; };
 		DA587A2C1AABAC4200E5B9EE /* bg_button_pink_pressed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_button_pink_pressed.png; sourceTree = "<group>"; };
 		DA587A2D1AABAC4200E5B9EE /* bg_button_pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_button_pink.png; sourceTree = "<group>"; };
+		DA643B121AAC6F9A003A4757 /* bg_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_blue.png; sourceTree = "<group>"; };
+		DA643B131AAC6F9A003A4757 /* bg_green.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_green.png; sourceTree = "<group>"; };
+		DA643B141AAC6F9A003A4757 /* bg_pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_pink.png; sourceTree = "<group>"; };
 		DABD8CE81AAA35C7003589BD /* Tic Tac Toe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tic Tac Toe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABD8CEC1AAA35C7003589BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DABD8CED1AAA35C7003589BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +99,9 @@
 				DA587A271AABAC4200E5B9EE /* bg_button_blue.png */,
 				DA587A281AABAC4200E5B9EE /* bg_button_green_pressed.png */,
 				DA587A291AABAC4200E5B9EE /* bg_button_green.png */,
+				DA643B121AAC6F9A003A4757 /* bg_blue.png */,
+				DA643B131AAC6F9A003A4757 /* bg_green.png */,
+				DA643B141AAC6F9A003A4757 /* bg_pink.png */,
 				DA587A2A1AABAC4200E5B9EE /* bg_button_orange_pressed.png */,
 				DA587A2B1AABAC4200E5B9EE /* bg_button_orange.png */,
 				DA587A2C1AABAC4200E5B9EE /* bg_button_pink_pressed.png */,
@@ -250,7 +259,10 @@
 				DA587A331AABAC4200E5B9EE /* bg_button_orange.png in Resources */,
 				DA587A311AABAC4200E5B9EE /* bg_button_green.png in Resources */,
 				DABD8CF31AAA35C7003589BD /* Main.storyboard in Resources */,
+				DA643B161AAC6F9A003A4757 /* bg_green.png in Resources */,
+				DA643B171AAC6F9A003A4757 /* bg_pink.png in Resources */,
 				DABD8D111AAA3B50003589BD /* circle.png in Resources */,
+				DA643B151AAC6F9A003A4757 /* bg_blue.png in Resources */,
 				DA587A231AABA11800E5B9EE /* bg_orange.png in Resources */,
 				DA587A321AABAC4200E5B9EE /* bg_button_orange_pressed.png in Resources */,
 				DA587A2E1AABAC4200E5B9EE /* bg_button_blue_pressed.png in Resources */,
