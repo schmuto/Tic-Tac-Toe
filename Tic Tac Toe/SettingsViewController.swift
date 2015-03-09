@@ -25,40 +25,34 @@ class SettingsViewController: UIViewController {
     
     
     @IBAction func panned(sender: AnyObject) {
-        println("User cancelled")
         applyColor("")
     }
     
     @IBAction func tappedBlue(sender: AnyObject) {
-        println("User chose blue")
         returnButtonsToNormal()
         blueButton.setImage(UIImage(named: "bg_button_blue_pressed"), forState: .Normal)
         applyColor("blue")
     }
     
     @IBAction func tappedGreen(sender: AnyObject) {
-        println("User chose green")
         returnButtonsToNormal()
         greenButton.setImage(UIImage(named: "bg_button_green_pressed"), forState: .Normal)
         applyColor("green")
     }
     
     @IBAction func tappedOrange(sender: AnyObject) {
-        println("User chose orange")
         returnButtonsToNormal()
         orangeButton.setImage(UIImage(named: "bg_button_orange_pressed"), forState: .Normal)
         applyColor("orange")
     }
     
     @IBAction func tappedPink(sender: AnyObject) {
-        println("User chose pink")
         returnButtonsToNormal()
         pinkButton.setImage(UIImage(named: "bg_button_pink_pressed"), forState: .Normal)
         applyColor("pink")
     }
     
     @IBAction func tappedUnwindSegue(sender: AnyObject) {
-        println("User cancelled")
         applyColor("")
     }
     
@@ -92,7 +86,6 @@ class SettingsViewController: UIViewController {
     
     func applyColor(color:String) {
         if color.isEmpty == false {
-            println("apply new color")
             NSUserDefaults.standardUserDefaults().setObject(color, forKey: "bgColor")
         }
         self.dismissViewControllerAnimated(true, completion: nil)

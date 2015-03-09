@@ -16,7 +16,7 @@ class MainViewController: UIViewController {
     
     var draw = false
     
-    let winnerNames = ["null", "Filled Circle", "Empty Circle"]
+    let winnerNames = ["null", "Filled Circle", "Outlined Circle"]
     
     var backgroundColor = "orange"
     
@@ -52,10 +52,10 @@ class MainViewController: UIViewController {
             }
             
             if (winner != 0) {
-                let playAgainAction = UIAlertAction(title: "Let's play again!", style: .Default) { (action) in
+                let playAgainAction = UIAlertAction(title: "Play again", style: .Default) { (action) in
                     self.resetGame()
                 }
-                let alertController = UIAlertController(title: "We have a winner!", message: "\(winnerNames[winner]) wins.", preferredStyle: .Alert)
+                let alertController = UIAlertController(title: "\(winnerNames[winner]) wins!", message: nil, preferredStyle: .Alert)
                 alertController.addAction(playAgainAction)
                 self.presentViewController(alertController, animated: true) {
                 }
@@ -66,14 +66,12 @@ class MainViewController: UIViewController {
             UIView.transitionWithView(sender, duration: 0.2, options: .TransitionCrossDissolve, animations: { sender.setImage(image, forState: .Normal) }, completion: nil)
             sender.userInteractionEnabled = false
             
-            //if game ended in a draw
-            
-            
+            //if game ended in a tie
             if (goNumber >= 10 && winner == 0) {
-                let playAgainAction = UIAlertAction(title: "Let's play again!", style: .Default) { (action) in
+                let playAgainAction = UIAlertAction(title: "Play again", style: .Default) { (action) in
                         self.resetGame()
                 }
-                let alertController = UIAlertController(title: "We have a tie!", message: "", preferredStyle: .Alert)
+                let alertController = UIAlertController(title: "Tie!", message: nil, preferredStyle: .Alert)
                 alertController.addAction(playAgainAction)
                 self.presentViewController(alertController, animated: true) {
                 }
@@ -104,11 +102,16 @@ class MainViewController: UIViewController {
 
     
     override func viewDidAppear(animated: Bool) {
+        /*if (backgroundColor != NSUserDefaults.standardUserDefaults().objectForKey("bgColor") as String) {
+            updateBackgroundColor()
+        }*/
+    }
+    
+    override func viewWillAppear(animated: Bool) {
         if (backgroundColor != NSUserDefaults.standardUserDefaults().objectForKey("bgColor") as String) {
             updateBackgroundColor()
         }
     }
-    
     
     func resetGame() {
         goNumber = 1
